@@ -1,0 +1,15 @@
+[user]
+	name = Jeremy Cade
+	email = jeremy.cade@griffithuni.edu.au
+[color]
+	ui = true
+[core]
+	excludesfile = /Users/JeremyCade/.gitignore_global
+	editor = vim
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[push]
+	default = simple

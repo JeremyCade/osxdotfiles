@@ -1,0 +1,95 @@
+# HOMEBREW Options
+export HOMEBREW_GITHUB_API_TOKEN=b3239a24315c30b0d43058339cd9d1ddcca6fc01
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# GOPATH
+export GOPATH=$HOME/golang
+
+#Add Brews, Postgres and RVM 
+PATH=$HOME/.rvm/bin:/usr/local/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:$GOPATH/bin:$PATH
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Git Completion
+if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+fi
+
+# Git Prompt
+if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+fi
+
+# GO Completion
+if [ -f `brew --prefix`/etc/bash_completion.d/go-completion.bash ]; then
+  . `brew --prefix`/etc/bash_completion.d/go-completion.bash
+fi
+
+# Git Prompt Options
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_SHOWUNTRACKEDFILES=1
+GIT_PS1_SHOWSTASHSTATE=1
+#GIT_PS1_SHOWUPSTREAM="verbose name"
+GIT_PS1_DESCRIBE_STYLE="branch"
+GIT_PS1_SHOWCOLORHINTS=1 #Colors
+
+# Prompt Colours
+OFF="\[\033[0m\]"
+BLACK="\[\033[0;30m\]"
+DARK_GRAY="\[\033[1;30m\]"
+BLUE="\[\033[0;34m\]"
+LIGHT_BLUE="\[\033[1;34m\]"
+GREEN="\[\033[0;32m\]"
+LIGHT_GREEN="\[\033[1;32m\]"
+CYAN="\[\033[0;36m\]" 
+LIGHT_CYAN="\[\033[1;36m\]"
+RED="\[\033[0;31m\]"
+LIGHT_RED="\[\033[1;31m\]"
+PURPLE="\[\033[0;35m\]"
+LIGHT_PURPLE="\[\033[1;35m\]"
+BROWN="\[\033[0;33m\]"
+YELLOW="\[\033[1;33m\]"
+LIGHT_GRAY="\[\033[0;37m\]"
+WHITE="\[\033[1;37m\]"
+
+# PS1 VIRTUALENV + GIT + Custom Colors
+# PS1="${LIGHT_CYAN}\u${OFF}@${LIGHT_PURPLE}\h${OFF}:${LIGHT_GREEN}\W${OFF}"
+# PS1+='$(__git_ps1 "( %s)")\$ '
+# export PS1
+
+PROMPT_COMMAND+='__git_ps1 "${VIRTUAL_ENV:+[$YELLOW`basename $VIRTUAL_ENV`$OFF]}$LIGHT_CYAN\u$OFF@$LIGHT_PURPLE\h$OFF:$LIGHT_GREEN\W$OFF" "\\\$ "'
+
+# Bash Colors
+export CLICOLOR=1
+export LS_OPTIONS="--color=auto"
+
+# MiPAL Infrastructure
+# export MIPAL=$HOME/src/MiPal
+# export GUNAO_DIR=$HOME/src/MiPal/GUNao
+# export AL_DIR=/usr/local/naoqi-sdk-1.14.3-mac64
+# export OE_CROSS_DIR=$AL_DIR/crosstoolchain
+# export PYTHONPATH=$AL_DIR/lib
+# if [ -z "$MANPATH" ]; then
+#      export MANPATH="`manpath`:$HOME/src/MiPal/Docs/man"
+# else
+#      MANPATH="${MANPATH}:$HOME/src/MiPal/Docs/man"
+# fi
+# alias nao_ssh='ssh-add $HOME/src/MiPal/GUNao/.ssh/id*rsa'
+
+# Aliases
+alias tree='tree -C'
+alias reload_bash='source ~/.bash_profile'
+
+# ROS
+# source ~/ros_catkin_ws/install_isolated/setup.bash
+
+# .net CORE
+if [ -f dnvm.sh ]; then
+    source dnvm.sh
+fi
+
+# Visual Studio Code
+code () {
+    VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*
+}
