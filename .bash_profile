@@ -80,6 +80,8 @@ export LS_OPTIONS="--color=auto"
 # Aliases
 alias tree='tree -C'
 alias reload_bash='source ~/.bash_profile'
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 # ROS
 # source ~/ros_catkin_ws/install_isolated/setup.bash
