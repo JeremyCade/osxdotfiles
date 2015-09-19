@@ -87,8 +87,8 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 # source ~/ros_catkin_ws/install_isolated/setup.bash
 
 # .net CORE
-if [ -f dnvm.sh ]; then
-    source dnvm.sh
+if [ -f $HOME/.dnx/dnvm/dnvm.sh ]; then
+    source $HOME/.dnx/dnvm/dnvm.sh 
 fi
 
 # Visual Studio Code
