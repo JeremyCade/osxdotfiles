@@ -11,29 +11,6 @@ PATH=$HOME/.rvm/bin:/usr/local/bin:/Applications/Postgres.app/Contents/Versions/
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# Git Completion
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
-fi
-
-# Git Prompt
-if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
-fi
-
-# GO Completion
-if [ -f `brew --prefix`/etc/bash_completion.d/go-completion.bash ]; then
-  . `brew --prefix`/etc/bash_completion.d/go-completion.bash
-fi
-
-# Git Prompt Options
-GIT_PS1_SHOWDIRTYSTATE=1
-GIT_PS1_SHOWUNTRACKEDFILES=1
-GIT_PS1_SHOWSTASHSTATE=1
-#GIT_PS1_SHOWUPSTREAM="verbose name"
-GIT_PS1_DESCRIBE_STYLE="branch"
-GIT_PS1_SHOWCOLORHINTS=1 #Colors
-
 # Prompt Colours
 OFF="\[\033[0m\]"
 BLACK="\[\033[0;30m\]"
@@ -53,38 +30,46 @@ YELLOW="\[\033[1;33m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
 WHITE="\[\033[1;37m\]"
 
-# PS1 VIRTUALENV + GIT + Custom Colors
-# PS1="${LIGHT_CYAN}\u${OFF}@${LIGHT_PURPLE}\h${OFF}:${LIGHT_GREEN}\W${OFF}"
-# PS1+='$(__git_ps1 "( %s)")\$ '
-# export PS1
-
-PROMPT_COMMAND+='__git_ps1 "${VIRTUAL_ENV:+[$YELLOW`basename $VIRTUAL_ENV`$OFF]}$LIGHT_CYAN\u$OFF@$LIGHT_PURPLE\h$OFF:$LIGHT_GREEN\W$OFF" "\\\$ "'
-
 # Bash Colors
 export CLICOLOR=1
 export LS_OPTIONS="--color=auto"
 
-# MiPAL Infrastructure
-# export MIPAL=$HOME/src/MiPal
-# export GUNAO_DIR=$HOME/src/MiPal/GUNao
-# export AL_DIR=/usr/local/naoqi-sdk-1.14.3-mac64
-# export OE_CROSS_DIR=$AL_DIR/crosstoolchain
-# export PYTHONPATH=$AL_DIR/lib
-# if [ -z "$MANPATH" ]; then
-#      export MANPATH="`manpath`:$HOME/src/MiPal/Docs/man"
-# else
-#      MANPATH="${MANPATH}:$HOME/src/MiPal/Docs/man"
-# fi
-# alias nao_ssh='ssh-add $HOME/src/MiPal/GUNao/.ssh/id*rsa'
+# Git Completion
+if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+fi
+
+# Git Prompt
+if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+
+  # PS1 VIRTUALENV + GIT + Custom Colors
+  # PS1="${LIGHT_CYAN}\u${OFF}@${LIGHT_PURPLE}\h${OFF}:${LIGHT_GREEN}\W${OFF}"
+  # PS1+='$(__git_ps1 "( %s)")\$ '
+  # export PS1
+  
+  PROMPT_COMMAND='__git_ps1 "${VIRTUAL_ENV:+[$YELLOW`basename $VIRTUAL_ENV`$OFF]}$LIGHT_CYAN\u$OFF@$LIGHT_PURPLE\h$OFF:$LIGHT_GREEN\W$OFF" "\\\$ "'
+  # PROMPT_COMMAND+='__git_ps1 "${VIRTUAL_ENV:+[$YELLOW`basename $VIRTUAL_ENV`$OFF]}$LIGHT_CYAN\u$OFF@$LIGHT_PURPLE\h$OFF:$LIGHT_GREEN\W$OFF" "\\\$ "'
+
+  # Git Prompt Options
+  GIT_PS1_SHOWDIRTYSTATE=1
+  GIT_PS1_SHOWUNTRACKEDFILES=1
+  GIT_PS1_SHOWSTASHSTATE=1
+  #GIT_PS1_SHOWUPSTREAM="verbose name"
+  GIT_PS1_DESCRIBE_STYLE="branch"
+  GIT_PS1_SHOWCOLORHINTS=1 #Colors
+fi
+
+# GO Completion
+if [ -f `brew --prefix`/etc/bash_completion.d/go-completion.bash ]; then
+  . `brew --prefix`/etc/bash_completion.d/go-completion.bash
+fi
 
 # Aliases
 alias tree='tree -C'
 alias reload_bash='source ~/.bash_profile'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
-# ROS
-# source ~/ros_catkin_ws/install_isolated/setup.bash
 
 # .net CORE
 if [ -f $HOME/.dnx/dnvm/dnvm.sh ]; then
