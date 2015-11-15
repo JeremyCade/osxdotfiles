@@ -80,3 +80,7 @@ fi
 code () {
     VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*
 }
+
+
+# Mono
+export MONO_GAC_PREFIX="/usr/local"
