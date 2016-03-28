@@ -76,11 +76,6 @@ if [ -f $HOME/.dnx/dnvm/dnvm.sh ]; then
     source $HOME/.dnx/dnvm/dnvm.sh 
 fi
 
-# Visual Studio Code
-code () {
-    VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*
-}
-
-
 # Mono
 export MONO_GAC_PREFIX="/usr/local"
+
