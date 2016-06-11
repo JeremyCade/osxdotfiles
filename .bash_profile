@@ -34,6 +34,9 @@ WHITE="\[\033[1;37m\]"
 export CLICOLOR=1
 export LS_OPTIONS="--color=auto"
 
+# AWS CLI Completition
+complete -C aws_completer aws
+
 # Git Completion
 if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
   . `brew --prefix`/etc/bash_completion.d/git-completion.bash
@@ -70,3 +73,4 @@ alias tree='tree -C'
 alias reload_bash='source ~/.bash_profile'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
