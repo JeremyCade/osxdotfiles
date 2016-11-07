@@ -5,6 +5,9 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # GOPATH
 export GOPATH=$HOME/golang
 
+# DOTNET Runtime
+export DOTNET_RUNTIME_ID=osx.10.11-x64
+
 #Add Brews, Postgres and RVM 
 PATH=$HOME/.rvm/bin:/usr/local/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:$GOPATH/bin:$PATH
 
