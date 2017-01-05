@@ -25,3 +25,7 @@ set wildmenu
 set spelllang=en_us
 set showmatch
 filetype indent on
+
+if &diff
+        colorscheme evening
+endif
