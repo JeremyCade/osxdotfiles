@@ -1,6 +1,9 @@
 " Enable pathogen "
 execute pathogen#infect()
 
+" Enable Nord colorscheme "
+colorscheme nord
+
 " vim-go settings "
 let g:go_fmt_command = "goimports"
 
@@ -26,6 +29,3 @@ set spelllang=en_us
 set showmatch
 filetype indent on
 
-if &diff
-        colorscheme evening
-endif
