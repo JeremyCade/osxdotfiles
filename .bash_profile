@@ -7,6 +7,7 @@ export GOPATH=$HOME/golang
 
 # DOTNET Runtime
 export DOTNET_RUNTIME_ID=osx.10.11-x64
+export ASPNETCORE_ENVIRONMENT=Development 
 
 #Add Brews, Postgres and RVM 
 PATH=$HOME/.rvm/bin:/usr/local/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:$GOPATH/bin:$PATH
