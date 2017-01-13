@@ -1,7 +1,3 @@
-# HOMEBREW Options
-export HOMEBREW_GITHUB_API_TOKEN=b3239a24315c30b0d43058339cd9d1ddcca6fc01
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
 # GOPATH
 export GOPATH=$HOME/golang
 
