@@ -61,7 +61,7 @@ if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
   GIT_PS1_SHOWDIRTYSTATE=1
   GIT_PS1_SHOWUNTRACKEDFILES=1
   GIT_PS1_SHOWSTASHSTATE=1
-  #GIT_PS1_SHOWUPSTREAM="verbose name"
+  GIT_PS1_SHOWUPSTREAM="auto"
   GIT_PS1_DESCRIBE_STYLE="branch"
   GIT_PS1_SHOWCOLORHINTS=1 #Colors
 fi
