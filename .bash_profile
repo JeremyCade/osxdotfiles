@@ -78,3 +78,8 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias la='ls -a'
 alias ln='ls -aln'
+
+# Secrets and Additional bits
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
