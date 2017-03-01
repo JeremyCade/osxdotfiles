@@ -9,7 +9,7 @@ export ASPNETCORE_ENVIRONMENT=Development
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 #Add Brews, Postgres and RVM 
-PATH=$HOME/.rvm/bin:/usr/local/bin:/Applications/Postgres.app/Contents/Versions/9.4/bin:$GOPATH/bin:$PATH
+PATH=$HOME/.rvm/bin:$HOME/bin/:/usr/local/bin:GOPATH/bin:$PATH
 
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
