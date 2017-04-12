@@ -71,6 +71,9 @@ if [ -f `brew --prefix`/etc/bash_completion.d/go-completion.bash ]; then
   . `brew --prefix`/etc/bash_completion.d/go-completion.bash
 fi
 
+# Thefuck
+eval "$(thefuck --alias)"
+
 # Aliases
 alias tree='tree -C'
 alias reload_bash='source ~/.bash_profile'
