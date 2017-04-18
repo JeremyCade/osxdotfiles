@@ -2,7 +2,7 @@
 execute pathogen#infect()
 
 " Enable Nord colorscheme "
-colorscheme nord
+colorscheme elflord
 
 " vim-go settings "
 let g:go_fmt_command = "goimports"
