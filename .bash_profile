@@ -2,12 +2,12 @@
 export GOPATH=$HOME/golang
 
 # DOTNET Runtime
-export ASPNETCORE_ENVIRONMENT=Development 
+export ASPNETCORE_ENVIRONMENT=Development
 
-# JDK 
+# JDK
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-#Add Brews, Postgres and RVM 
+#Add Brews, Postgres and RVM
 PATH=$HOME/.rvm/bin:$HOME/bin/:/usr/local/bin:GOPATH/bin:$PATH
 
 # Load RVM into a shell session *as a function*
@@ -21,7 +21,7 @@ BLUE="\[\033[0;34m\]"
 LIGHT_BLUE="\[\033[1;34m\]"
 GREEN="\[\033[0;32m\]"
 LIGHT_GREEN="\[\033[1;32m\]"
-CYAN="\[\033[0;36m\]" 
+CYAN="\[\033[0;36m\]"
 LIGHT_CYAN="\[\033[1;36m\]"
 RED="\[\033[0;31m\]"
 LIGHT_RED="\[\033[1;31m\]"
@@ -48,13 +48,7 @@ fi
 if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
   . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
 
-  # PS1 VIRTUALENV + GIT + Custom Colors
-  # PS1="${LIGHT_CYAN}\u${OFF}@${LIGHT_PURPLE}\h${OFF}:${LIGHT_GREEN}\W${OFF}"
-  # PS1+='$(__git_ps1 "( %s)")\$ '
-  # export PS1
-  
   PROMPT_COMMAND='__git_ps1 "${VIRTUAL_ENV:+[$YELLOW`basename $VIRTUAL_ENV`$OFF]}$LIGHT_CYAN\u$OFF@$LIGHT_PURPLE\h$OFF:$LIGHT_GREEN\W$OFF" "\\\$ "'
-  # PROMPT_COMMAND+='__git_ps1 "${VIRTUAL_ENV:+[$YELLOW`basename $VIRTUAL_ENV`$OFF]}$LIGHT_CYAN\u$OFF@$LIGHT_PURPLE\h$OFF:$LIGHT_GREEN\W$OFF" "\\\$ "'
 
   # Git Prompt Options
   GIT_PS1_SHOWDIRTYSTATE=1
@@ -73,7 +67,7 @@ fi
 # Thefuck
 eval "$(thefuck --alias)"
 
-# Aliases
+# Default Aliases
 alias tree='tree -C'
 alias reload_bash='source ~/.bash_profile'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
