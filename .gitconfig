@@ -16,3 +16,5 @@
     followTags = true
 [credential]
 	helper = osxkeychain
+[merge]
+	tool = kdiff3
