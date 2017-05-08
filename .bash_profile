@@ -2,6 +2,7 @@
 export GOPATH=$HOME/golang
 
 # DOTNET Runtime
+export DOTNET_RUNTIME_ID=osx.10.11-x64
 export ASPNETCORE_ENVIRONMENT=Development
 
 # JDK
