@@ -50,7 +50,7 @@ fi
 if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
   . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
 
-  PROMPT_COMMAND='__git_ps1 "${VIRTUAL_ENV:+[$YELLOW`basename $VIRTUAL_ENV`$OFF]}$LIGHT_CYAN\u$OFF@$LIGHT_PURPLE\h$OFF:$LIGHT_GREEN\W$OFF" "\\\$ "'
+  PROMPT_COMMAND='update_terminal_cwd; __git_ps1 "${VIRTUAL_ENV:+[$YELLOW`basename $VIRTUAL_ENV`$OFF]}$LIGHT_CYAN\u$OFF@$LIGHT_PURPLE\h$OFF:$LIGHT_GREEN\W$OFF" "\\\$ "'
 
   # Git Prompt Options
   GIT_PS1_SHOWDIRTYSTATE=1
