@@ -2,9 +2,8 @@
 export GOPATH=$HOME/golang
 
 # DOTNET Runtime
-export DOTNET_RUNTIME_ID=osx.10.11-x64
 export ASPNETCORE_ENVIRONMENT=Development
-export FrameworkPathOverride=/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.5/
+# export FrameworkPathOverride=/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.5/
 
 # JDK
 export JAVA_HOME=$(/usr/libexec/java_home)
