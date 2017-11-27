@@ -3,7 +3,7 @@ export GOPATH=$HOME/golang
 
 # DOTNET Runtime
 export ASPNETCORE_ENVIRONMENT=Development
-# export FrameworkPathOverride=/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.5/
+export FrameworkPathOverride=/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.6.2-api/
 
 # JDK
 export JAVA_HOME=$(/usr/libexec/java_home)
