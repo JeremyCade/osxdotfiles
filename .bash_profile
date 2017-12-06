@@ -73,8 +73,6 @@ alias tree='tree -C'
 alias reload_bash='source ~/.bash_profile'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-alias la='ls -a'
-alias ln='ls -aln'
 alias serve='python3 -m http.server'
 
 # Secrets and Additional bits
