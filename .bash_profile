@@ -66,7 +66,7 @@ if [ -f `brew --prefix`/etc/bash_completion.d/go-completion.bash ]; then
 fi
 
 # Thefuck
-eval "$(thefuck --alias)"
+# eval "$(thefuck --alias)"
 
 # Default Aliases
 alias tree='tree -C'
