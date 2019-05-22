@@ -5,15 +5,6 @@ export GOPATH=$HOME/golang
 export ASPNETCORE_ENVIRONMENT=Development
 export FrameworkPathOverride=/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.6.2-api/
 
-# JDK
-export JAVA_HOME=$(/usr/libexec/java_home)
-
-#Add Brews, Postgres and RVM
-PATH=$HOME/.rvm/bin:$HOME/bin/:/usr/local/bin:GOPATH/bin:$PATH
-
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 # Prompt Colours
 OFF="\[\033[0m\]"
 BLACK="\[\033[0;30m\]"
@@ -75,11 +66,6 @@ if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
   GIT_PS1_SHOWUPSTREAM="auto"
   GIT_PS1_DESCRIBE_STYLE="branch"
   GIT_PS1_SHOWCOLORHINTS=1 #Colors
-fi
-
-# GO Completion
-if [ -f `brew --prefix`/etc/bash_completion.d/go-completion.bash ]; then
-  . `brew --prefix`/etc/bash_completion.d/go-completion.bash
 fi
 
 # Thefuck
