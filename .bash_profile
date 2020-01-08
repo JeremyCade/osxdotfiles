@@ -68,6 +68,16 @@ if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
   GIT_PS1_SHOWCOLORHINTS=1 #Colors
 fi
 
+# Google Cloud
+if [ -f `brew --prefix`/Caskrook/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc ]; then
+    . `brew --prefix`/Caskrook/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc 
+fi
+
+if [ -f `brew --prefix`/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc ]; then
+    . `brew --prefix`/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
+fi
+
+
 # Thefuck
 eval "$(thefuck --alias)"
 
