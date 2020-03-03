@@ -1,3 +1,8 @@
+# Homebrew Ruby
+if [ -f `brew --prefix`/opt/ruby/bin/ruby ]; then
+    export PATH="/usr/local/opt/ruby/bin:$PATH"
+fi
+
 # GOPATH
 export GOPATH=$HOME/golang
 
