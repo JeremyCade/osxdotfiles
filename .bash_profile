@@ -8,6 +8,11 @@ if [ -f `brew --prefix`/opt/curl/bin/curl ]; then
     export PATH="/usr/local/opt/curl/bin:$PATH"
 fi
 
+# SqlPackage
+if [ -f $HOME/Applications/sqlpackage/sqlpackage ]; then
+    export PATH="$HOME/Applications/sqlpackage:$PATH"
+fi
+
 # GOPATH
 export GOPATH=$HOME/golang
 
