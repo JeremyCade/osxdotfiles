@@ -92,9 +92,10 @@ if [ -f `brew --prefix`/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/comple
     . `brew --prefix`/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 fi
 
-
 # Thefuck
-eval "$(thefuck --alias)"
+if [ -f `brew --prefix`/bin/thefuck ]; then
+    eval "$(thefuck --alias)"
+fi
 
 # Default Aliases
 alias tree='tree -C'
