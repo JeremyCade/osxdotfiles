@@ -4,15 +4,24 @@ export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZSH/oh-my-zsh.sh
 source $ZPLUG_HOME/init.zsh
 
+# Set Dracula as the theme
 zplug "dracula/zsh", as:theme
-zplug "plugins/git", from:oh-my-zsh
+
+# Setup plugins
 zplug "plugins/brew", from:oh-my-zsh
+zplug "plugins/docker-componse", from:oh-my-zsh
+zplug "plugins/docker", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/node", from:oh-my-zsh
+zplug "plugins/npm", from:oh-my-zsh
 zplug "plugins/thefuck", from:oh-my-zsh
 
+# Check if we need to install anything.
 if ! zplug check; then
     zplug install
 fi
 
+# Load it all.
 zplug load 
 
 # Secrets and Additional bits
