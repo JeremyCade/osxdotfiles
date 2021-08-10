@@ -1,6 +1,7 @@
 export ZSH="/Users/jeremycade/.oh-my-zsh"
-
 export ZPLUG_HOME=/usr/local/opt/zplug
+
+source $ZSH/oh-my-zsh.sh
 source $ZPLUG_HOME/init.zsh
 
 zplug "dracula/zsh", as:theme
@@ -13,8 +14,6 @@ if ! zplug check; then
 fi
 
 zplug load 
-
-source $ZSH/oh-my-zsh.sh
 
 # Secrets and Additional bits
 if [ -f ~/.bash_aliases ]; then
