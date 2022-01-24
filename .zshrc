@@ -8,6 +8,7 @@ source $ZPLUG_HOME/init.zsh
 zplug "dracula/zsh", as:theme
 
 # Setup plugins
+zplug "plugins/aws", from:oh-my-zsh
 zplug "plugins/brew", from:oh-my-zsh
 zplug "plugins/docker-componse", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
@@ -15,6 +16,7 @@ zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/golang", from:oh-my-zsh
 zplug "plugins/node", from:oh-my-zsh
 zplug "plugins/npm", from:oh-my-zsh
+zplug "plugins/terraform", from:oh-my-zsh
 zplug "plugins/thefuck", from:oh-my-zsh
 
 # Check if we need to install anything.
