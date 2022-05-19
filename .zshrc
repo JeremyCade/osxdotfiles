@@ -31,3 +31,9 @@ zplug load
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+# Handle Jetbrains Toolbox Scripts
+TOOLBOX_SCRIPTS="$HOME/Applications/JetBrains Toolbox"
+if [ -d $TOOLBOX_SCRIPTS ]; then
+    PATH=$PATH:$TOOLBOX_SCRIPTS
+fi
