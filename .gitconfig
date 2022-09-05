@@ -15,6 +15,7 @@
 [push]
     default = simple
     followTags = true
+	autoSetupRemote = true
 [credential]
 	helper = osxkeychain
 [merge]
