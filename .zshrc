@@ -10,7 +10,7 @@ zplug "dracula/zsh", as:theme
 # Setup plugins
 zplug "plugins/aws", from:oh-my-zsh
 zplug "plugins/brew", from:oh-my-zsh
-zplug "plugins/docker-componse", from:oh-my-zsh
+zplug "plugins/docker-compose", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/golang", from:oh-my-zsh
