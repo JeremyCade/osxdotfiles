@@ -7,22 +7,31 @@
 	excludesfile = /Users/jeremycade/.gitignore_global
 	editor = vim
 	ignorecase = false
+[credential]
+	helper = osxkeychain
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[init]
+	defaultBranch = main
+[branch]
+	autosetupmerge = always
+	autosetuprebase = always
+[fetch]
+	prune = true
+[pull]
+	rebase = true
 [push]
     default = simple
     followTags = true
 	autoSetupRemote = true
-[credential]
-	helper = osxkeychain
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
-	tool = kdiff3
-[pull]
-	rebase = false
-[init]
-	defaultBranch = main
-[fetch]
-	prune = true
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
