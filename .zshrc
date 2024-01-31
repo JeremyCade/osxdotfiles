@@ -39,3 +39,16 @@ TOOLBOX_SCRIPTS="$HOME/Applications/JetBrains Toolbox"
 if [ -d $TOOLBOX_SCRIPTS ]; then
     PATH=$PATH:$TOOLBOX_SCRIPTS
 fi
+
+
+
+# Handle Ruby & Ruby Gems (Cocoapods etc)
+RUBY_PATH="/usr/local/opt/ruby/bin"
+if [ -d $RUBY_PATH ]; then 
+    PATH=$RUBY_PATH:$PATH
+fi
+
+RUBY_GEMS_PATH="$HOME/.gem/bin"
+if [ -d $RUBY_GEMS_PATH ]; then 
+    PATH=$PATH:$RUBY_GEMS_PATH
+fi
